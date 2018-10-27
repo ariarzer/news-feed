@@ -27,4 +27,13 @@ class DB {
     }
 }
 
-module.exports = DB;
+const bases = {};
+
+function craeteDB(name) {
+    if (bases.hasOwnProperty(name)) {
+        return bases[name];
+    }
+    return new DB(name);
+}
+
+module.exports = craeteDB;
