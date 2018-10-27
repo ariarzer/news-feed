@@ -6,6 +6,7 @@ const articles = new db('articles');
 
 const router = new Router({
     '/': 'main.js',
+    '/favicon.ico' : 'main.js'
 });
 
 const server = new http.Server();
